@@ -14,6 +14,7 @@ O14201 (Solace SClampInFrameOp1 v09_28)
 (Depth: Per assignment page "All holes drilled to depth of Z-0.350")
 (From blueprint, material thickness spec is .125 +/- .005)
 
+
 (Speeds:)
 (Drilling Carbon Steel with HSS = 70 FPM)
 (calculated as 3.8 * FPM / diam -> 266 / diameter)
@@ -38,27 +39,35 @@ G54 (fixture offset)
 
 
 (========== Spot Drilling ==========)
-(depth formula: hole diam - web / 2 + chamfer allowance)
 T1 M06 (Change to Spot Drill)
 G43 H1 (tool length offset)
 S850 M03 (Spindle on clockwise rotation)
 
+(depth formula during spot drilling:)
+((radius + chamfer width - web radius) / tan(included angle / 2))
+(Using chamfer width = 0.01, web diameter = 0.050 -> .01 - .025 = -0.015)
+(tan(120 / 2) = tan(60) = 1.732)
+(depth forumla reduces to: (radius - .015) / 1.732)
+(hole 1 LMC: 0.1935 diameter -> r=0.09675 -> (0.08175 / 1.73) = 0.047)
+(hole 2 LMC: 0.3125 diameter -> r=0.15625 -> (0.14125 / 1.73) = 0.082)
+(hole 3/4 LMC: 0.1875 diameter -> r=0.09375 -> (0.07875 / 1.73) = 0.046)
+
 G00 X0 Y0 (Rapid to Absolute X0 Y0 position, the location of hole 1)
 M08 (Turn on coolant)
 G00 Z0.1 (Rapid to Z0.1 above the part)
-G01 Z-0.082 F2.55 (spot hole 1: 0.072 for LMC + 0.01 for chamfer)
+G01 Z-0.047 F2.55 (spot hole 1)
 G01 Z0.1 (Move back to Z.1 above the part)
 
 G00 X-1.813 Y0 (Move to hole 2 location)
-G01 Z-0.133 F2.55 (spot hole 2: 0.1315 for LMC + 0.0105 for chamfer)
+G01 Z-0.082 F2.55 (spot hole 2)
 G01 Z0.1 (Move back to Z.1 above the part)
 
 G00 X-2.380 Y0.66 (Move to hole 3 location)
-G01 Z-0.079 F2.55 (spot hole 3: 0.069 for LMC + 0.01 for chamfer)
+G01 Z-0.046 F2.55 (spot hole 3)
 G01 Z0.1 (Move back to Z.1 above the part)
 
 G00 X-2.618 Y2.03 (Move to hole 4 location)
-G01 Z-0.079 F2.55 (spot hole 4: same as hole 3)
+G01 Z-0.046 F2.55 (spot hole 4: same as hole 3)
 G01 Z0.1 (Move back to Z.1 above the part)
 
 M09 (Turn off coolant)
