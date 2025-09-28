@@ -49,15 +49,15 @@ G00 Z0.1 (Rapid to Z0.1 above the part)
 G01 Z-0.082 F2.55 (spot hole 1: 0.072 for LMC + 0.01 for chamfer)
 G01 Z0.1 (Move back to Z.1 above the part)
 
-G00 X1.813 Y0 (Move to hole 2 location)
+G00 X-1.813 Y0 (Move to hole 2 location)
 G01 Z-0.133 F2.55 (spot hole 2: 0.1315 for LMC + 0.0105 for chamfer)
 G01 Z0.1 (Move back to Z.1 above the part)
 
-G00 X2.380 Y0.66 (Move to hole 3 location)
+G00 X-2.380 Y0.66 (Move to hole 3 location)
 G01 Z-0.079 F2.55 (spot hole 3: 0.069 for LMC + 0.01 for chamfer)
 G01 Z0.1 (Move back to Z.1 above the part)
 
-G00 X2.618 Y2.03 (Move to hole 4 location)
+G00 X-2.618 Y2.03 (Move to hole 4 location)
 G01 Z-0.079 F2.55 (spot hole 4: same as hole 3)
 G01 Z0.1 (Move back to Z.1 above the part)
 
@@ -89,7 +89,7 @@ T3 M06 (Change to 5/16 Drill)
 G43 H3 (tool length offset)
 S M03 (Spindle on clockwise rotation)
 
-G00 X1.813 Y0 (Move to hole 2 location)
+G00 X-1.813 Y0 (Move to hole 2 location)
 M08 (Turn on coolant)
 G00 Z0.1 (Rapid to Z0.1 above the part)
 G01 Z-0.325 F5.1 (Move to Z depth for 5/16 Drill at the feed rate of #)
@@ -106,7 +106,7 @@ T4 M06 (Change to 3/16 Drill)
 G43 H4 (tool length offset)
 S1400 M03 (Spindle on clockwise rotation)
 
-G00 X2.380 Y0.66 (Move to hole 3 location)
+G00 X-2.380 Y0.66 (Move to hole 3 location)
 M08 (Turn on coolant)
 G00 Z0.1 (Rapid to Z0.1 above the part)
 G01 Z-0.325 F4.2 (Move to Z depth for 3/16 Drill at the feed rate of #)
@@ -114,7 +114,7 @@ G01 Z0.1 (Move back to Z.1 above the part)
 
 (No tool change as holes 3 and 4 are same)
 
-G00 X2.618 Y2.03 (Move to hole 4 location)
+G00 X-2.618 Y2.03 (Move to hole 4 location)
 G01 Z-0.325 F4.2 (Move to Z depth for 3/16 Drill at the feed rate of #)
 G01 Z0.1 (Move back to Z.1 above the part)
 
