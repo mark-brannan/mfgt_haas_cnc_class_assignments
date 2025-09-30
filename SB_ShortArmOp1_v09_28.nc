@@ -1,8 +1,7 @@
 %
-O14201 (Solace SClampInFrameOp1 v09_28)
+O14201 (Solace SClampShortArmOp1 v09_28)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - Inner Frame Op.1 (Short Arm) - Holes Program")
-(O14201)
 
 (========== Notes ==========)
 (Per setup sheet:)
