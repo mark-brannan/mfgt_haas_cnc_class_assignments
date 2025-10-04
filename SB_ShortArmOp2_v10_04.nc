@@ -16,7 +16,7 @@ G00 Z-0.150 (Rapid to below edge of part)
 
 F6.4 (Set feed rate for all milling moves)
 
-G01 G42 D06 X0 Y-0.375 (Activate cutter comp for T6. Move at a right angle to point 1)
+G01 G42 D05 X0 Y-0.375 (Activate cutter comp for T5 D05. Move at a right angle to point 1)
 
 G01 X-1.8071 Y-.375 (Move to Point 2)
 G02 X-2.0944 Y-.241 R0.375 (Move to Point 3)
