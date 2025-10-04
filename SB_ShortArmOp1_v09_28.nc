@@ -54,7 +54,7 @@ S850 M03 (Spindle on clockwise rotation)
 G00 X0 Y0 (Rapid to Absolute X0 Y0 position, the location of hole 1)
 M08 (Turn on coolant)
 G00 Z0.1 (Rapid to Z0.1 above the part)
-G01 Z-0.047 F2.55 (spot hole 1)
+G01 Z-0.052 F2.55 (spot hole 1, needs to be a little deeper than calc)
 G01 Z0.1 (Move back to Z.1 above the part)
 
 G00 X-1.813 Y0 (Move to hole 2 location)
@@ -72,7 +72,7 @@ G01 Z0.1 (Move back to Z.1 above the part)
 M09 (Turn off coolant)
 G00 Z7.0 M05 (Sends tool to Z home && turn off spindle)
 
-M01 (Optional stop; inspect all spot positions)
+M01 (Optional stop, inspect all spot positions)
 
 
 (========== #10 Drill for hole 1 ==========)

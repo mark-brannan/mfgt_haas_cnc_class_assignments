@@ -1,5 +1,5 @@
 %
-O14202 (Solace SClampLongArmOp1 v09_29)
+O14202 (Solace SClampLongArmOp1 v10_04)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - Outer Frame Op.1 (Long Arm) - Holes Program")
 
