@@ -43,7 +43,7 @@ M01 (Optional stop; inspect all spot positions)
 (========== 5/16 Drill for hole 1 ==========)
 T3 M06 (Change to 5/16 Drill)
 G43 H3 (tool length offset)
-S M03 (Spindle on clockwise rotation)
+S850 M03 (Spindle on clockwise rotation)
 
 G00 X0 Y0 (location of hole 1)
 M08 (Turn on coolant)
