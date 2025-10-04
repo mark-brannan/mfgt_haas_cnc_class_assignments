@@ -5,7 +5,7 @@ O14200 (Solace Initials_1a v09_29)
 (You will write a program to draw your initials.)
 (Use the first letter of you first, middle and last name.)
 (You will use what you learn from the pages above to write your program.)
-(The letters should be about 2.5” high.)
+(The letters should be about 2.5" high.)
 (You can use graph paper to help you plot out where your points should go.)
 
 (========== Setup ==========)
