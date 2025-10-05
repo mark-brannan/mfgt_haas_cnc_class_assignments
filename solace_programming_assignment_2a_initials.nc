@@ -1,5 +1,5 @@
 %
-O14200 (Solace Initials_1a v09_29)
+O14200 (Solace Initials_2a)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 
 (You will edit your program of your initials to now include curves.)
