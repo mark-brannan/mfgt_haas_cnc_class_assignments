@@ -1,5 +1,5 @@
 %
-O14201 (Solace SClampShortArmOp2 v10_04)
+O14203 (Solace SClampShortArmOp2 v10_04)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp Inner Frame Op2 Periphery")
 
