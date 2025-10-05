@@ -1,5 +1,5 @@
 %
-O14202 (Solace SClampLongArmOp1 v10_04)
+O14202 (Solace SClampLongArmOp1 v10_05)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - Outer Frame Op.1 (Long Arm) - Holes Program")
 
@@ -12,7 +12,8 @@ G43 H1 (tool length offset)
 S850 M03 (Spindle on clockwise rotation)
 
 G00 X0 Y0 (location of hole 1)
-M08 (Turn on coolant)
+
+G00 Z1.0 M08 (Rapid near part surface and turn on coolant)
 
 G00 Z0.1
 G01 Z-0.087 F2.55
@@ -46,7 +47,7 @@ G43 H3 (tool length offset)
 S850 M03 (Spindle on clockwise rotation)
 
 G00 X0 Y0 (location of hole 1)
-M08 (Turn on coolant)
+G00 Z1.0 M08 (Rapid near part surface and turn on coolant)
 
 G00 Z0.1
 G01 Z-0.300 F5.1
@@ -65,7 +66,7 @@ S1400 M03 (Spindle on clockwise rotation)
 
 G00 X0.913 Y0.15 (hole 2 location)
 
-M08 (Turn on coolant)
+G00 Z1.0 M08 (Rapid near part surface and turn on coolant)
 
 G00 Z0.1
 G01 Z-0.300 F4.2
