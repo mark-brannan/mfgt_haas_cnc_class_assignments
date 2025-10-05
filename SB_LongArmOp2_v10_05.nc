@@ -35,7 +35,7 @@ G03 X1.7146 Y-0.3750 R0.375
 G01 X0.000 Y-0.375
 G02 X0.000 Y0.375 (Return to point 1 in a half circle)
 
-G01 G40 X0 Y-1.5 (Cancel cutter comp. Move at a right angle off the part.)
+G01 G40 X0 Y1.5 (Cancel cutter comp. Move at a right angle off the part.)
 
 M09 (Turn off coolant)
 G00 Z7.0 M05 (Sends tool to Z home && turn off spindle)
