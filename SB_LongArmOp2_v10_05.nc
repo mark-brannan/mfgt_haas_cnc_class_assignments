@@ -7,7 +7,7 @@ G17 G20 G40 G80 G90 G94 (Safe line)
 G54 (fixture offset)
 
 T5 M06 (Change to end mill)
-G43 H1 (tool length offset)
+G43 H5 (tool length offset)
 S800 M03 (Spindle on clockwise rotation)
 
 G00 X0 Y1.5 (Rapid to 1" above the top of the part)
@@ -16,7 +16,7 @@ G00 Z-0.150 (Rapid to below edge of part)
 
 F6.4 (Set feed rate for all milling moves)
 
-G01 G42 D05 X0 Y0.375 (Activate cutter comp for T5 D05. Move at a right angle to point 1)
+G01 G41 D05 X0 Y0.375 (Activate cutter comp for T5 D05. Move at a right angle to point 1)
 
 G01 X1.7802 Y0.375
 G02 X1.8453 Y0.3693 R0.375
