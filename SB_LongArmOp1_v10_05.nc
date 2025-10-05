@@ -1,7 +1,7 @@
 %
 O14202 (Solace SClampLongArmOp1 v10_05)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
-("Scissors Clamp - Outer Frame Op.1 (Long Arm) - Holes Program")
+("Scissors Clamp - Outer Frame Op.1 Long Arm - Holes Program")
 
 G17 G20 G40 G80 G90 G94 (Safe line)
 G54 (fixture offset)
