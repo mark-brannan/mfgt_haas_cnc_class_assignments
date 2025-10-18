@@ -6,8 +6,8 @@ O14205 (Solace SClampJawsFacing v10_18)
 G17 G20 G40 G80 G90 G94 (Safe line)
 G54 (fixture offset)
 
-T5 M06 (Change to end mill, 2")
-G43 H5 (tool length offset, measured from top of parallels, bottom of part)
+T4 M06 (Change to face mill, 2")
+G43 H4 (tool length offset, measured from top of parallels, bottom of part)
 S800 M03 (Spindle on clockwise rotation)
 
 G00 X4.0 Y-2.3 (Rapid to right side of part and vise edge, mill center forward of part)
