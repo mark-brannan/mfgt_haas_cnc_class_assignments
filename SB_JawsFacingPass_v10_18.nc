@@ -16,6 +16,7 @@ G00 Z2.0 (Rapid to just over top part)
 (800 RPM x 4 teeth x 0.008 inches/tooth = 25.6 IPM)
 F25 (Set feed rate for all milling moves)
 
+M08 (Turn on coolant)
 
 G00 Z.450 (start thicknessing from .450 since most stock was already squared to less than .500)
 G01 X-2.0 (climb mill through top face of part moving left to right)
@@ -32,6 +33,7 @@ G00 Z.385
 G01 X-2.0
 G00 Z.400 (safe height)
 
+M09 (Turn off coolant)
 (Move spindle away and pause to swich parts)
 G00 Z7.0
 G00 X7.0
@@ -40,6 +42,8 @@ M01 (Optional stop, switch parts)
 
 G00 X4.0 Y-2.3 (Rapid back to starting x,y position)
 G00 Z2.0
+
+M08 (Turn on coolant)
 
 G00 Z.700 (start thicknessing from .700 since most stock was already squared to less than ~.750)
 G01 X-2.0 (climb mill through top face of part moving left to right)
@@ -56,6 +60,7 @@ G00 Z.645
 G01 X-2.0
 G00 Z.700 (safe height)
 
+M09 (Turn off coolant)
 G00 X4.0 Y-2.3 (Rapid back to starting x,y position)
 
 G00 Z7.0 M05 (Sends tool to Z home && turn off spindle)
