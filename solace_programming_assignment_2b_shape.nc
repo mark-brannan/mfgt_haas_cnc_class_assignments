@@ -2,7 +2,7 @@
 O14200 (Solace ShapeDrawing_2b )
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 
-(This time you will write a program to draw a shape using the information from the drawing below.)
+(This time you will edit your program of the shape from programming assignment 1 part B using the information from the drawing below.)
 (Use what you learn from the pages above to write your program.)
 (You can use graph paper to help you plot out where your points should go.)
 
