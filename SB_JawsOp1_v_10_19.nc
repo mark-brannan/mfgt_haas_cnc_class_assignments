@@ -1,5 +1,5 @@
 %
-O14205 (Solace SClampJawsOp1 v10_18)
+O14205 (Solace SClampJawsOp1 v10_19)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp Jaws Facing pass")
 
