@@ -14,7 +14,7 @@ S600 (600 RPM for facing brass with carbide)
 F40.0 (600 RPM x 9 teeth x 0.008 inches/tooth = 43.2 IPM)
 
 G00 X1.5 Y2.5 Z7.0 (rapid to right rear of part with safe Z distance)
-G00 Z1.75
+G00 Z1.5
 M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 
@@ -32,8 +32,7 @@ G00 Y2.25
 G00 Z.385
 G01 Y-1.75
 G00 Z.400
-G00 Z2 (safe height)
-M05
+G00 Z1.5 M05 (back off and stop)
 M09
 G00 X0 Y0 Z7.0 (center and raise higher for clearance)
 G53 G00 Y0 (bring vise forward to absolute Y zero)
@@ -44,14 +43,15 @@ S800 (800 is good for 5/16 and brass)
 T02 M06 (Change to spot drill)
 G43 H2
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
-G00 Z1.0
+G00 Z1.5
 M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 G00 Z.400
 G01 Z.299 F4.0 (spot hole plus extra for small chamfer .385 - .086)
-G00 Z3.0 M05 (back off and stop)
+G00 Z1.5 M05 (back off and stop)
 M09
 
+G00 Z7.0 (safe height)
 T03 M06 (Change to 5/16 Drill)
 G43 H3
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
