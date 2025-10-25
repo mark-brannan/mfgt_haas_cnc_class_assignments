@@ -60,7 +60,7 @@ M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 G00 Z.400 (close height)
 G01 Z-0.100 F4.0
-G00 Z3.0 M05 (back off and stop)
+G00 Z1.5 M05 (back off and stop)
 M09
 
 G00 Z7.0 (raise higher for clearance)
@@ -76,7 +76,7 @@ M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 G00 Z.400 (close height)
 G01 Z.299 F4.0 (spot hole plus extra for small chamfer .385 - .086)
-G00 Z1.0 M05 (back off and stop)
+G00 Z1.5 M05 (back off and stop)
 M09
 
 G00 Z7.0 (raise higher for clearance)
