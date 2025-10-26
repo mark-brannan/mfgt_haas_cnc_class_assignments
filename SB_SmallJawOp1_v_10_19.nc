@@ -15,7 +15,6 @@ F40.0 (600 RPM x 9 teeth x 0.008 inches/tooth = 43.2 IPM)
 
 G00 X1.5 Y2.1 Z7.0 (rapid to right rear of part with safe Z distance)
 G00 Z.75
-G00 Z0
 M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 
@@ -47,7 +46,7 @@ G00 Z1.5
 M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 G00 Z.400
-G01 Z.285 F4.0 (spot hole plus extra for small chamfer .385 - .100)
+G01 Z.299 F4.0 (spot hole plus extra for small chamfer .385 - .086)
 G00 Z1.5 M05 (back off and stop)
 M09
 
@@ -75,7 +74,7 @@ G00 Z1.0
 M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 G00 Z.400 (close height)
-G01 Z.285 F4.0 (spot hole plus extra for small chamfer .385 - .100)
+G01 Z.299 F4.0 (spot hole plus extra for small chamfer .385 - .086)
 G00 Z1.5 M05 (back off and stop)
 M09
 

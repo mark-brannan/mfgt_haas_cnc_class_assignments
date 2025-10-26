@@ -20,7 +20,6 @@ G01 Y-2.1 (climb mill through top face of part moving cutter front to back)
 G00 Z.75 M05 (back off and stop)
 M09
 G00 X0 Y0 Z7.0 (center and raise higher for clearance)
-G53 G00 Y0 (bring vise forward to absolute Y zero)
-G53 G00 Z0 (bring spindle up to absolute Z zero)
+G53 G00 Y0 Z0 (bring vise forward to absolute Y zero and spind up to abosolute Z zero)
 M02
 %
