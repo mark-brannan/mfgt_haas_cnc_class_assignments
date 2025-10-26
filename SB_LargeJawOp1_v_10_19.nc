@@ -13,25 +13,26 @@ G43 H1 (tool length offset, measured from top of parallels, bottom of part)
 S600 (600 RPM for facing brass with carbide)
 F40.0 (600 RPM x 9 teeth x 0.008 inches/tooth = 43.2 IPM)
 
-G00 X1.5 Y2.5 Z7.0 (rapid to right rear of part with safe Z distance)
-G00 Z1.5
+G00 X1.5 Y2.1 Z7.0 (rapid to right rear of part with safe Z distance)
+G00 Z.75
+G00 Z0
 M03 (spindle on clockwise rotation)
 M08 (cooleant on)
 
 G00 Z.725 (start thicknessing, most stock was already squared to less than ~.750)
-G01 Y-1.75 (climb mill through top face of part moving cutter front to back)
-G00 Z.750
-G00 Y2.25
+G01 Y-2.1 (climb mill through top face of part moving cutter front to back)
+G00 Y2.1 Z.750
 
 G00 Z.650
-G01 Y-1.75
-G00 Z.700
-G00 Y2.25
+G01 Y-2.1
+G00 Y2.1 Z.700
 
 (.630 + .015 = .645 MMC thickness for large jaw)
+(finishing pass, half the feed rate)
+F26.1 (600 RPM x 9 teeth x 0.004 inches/tooth = 26.1 IPM)
 G00 Z.645
-G01 Y-1.75
-G00 Z.700
+G01 Y-2.1 Z.700
+
 G00 Z1.5 M05 (back off and stop)
 M09
 G00 X0 Y0 Z7.0 (center and raise higher for clearance)
