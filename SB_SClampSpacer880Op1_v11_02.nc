@@ -1,5 +1,5 @@
 %
-O14212 (Solace SClampSpacer880Op1 v11_02)
+O14210 (Solace SClampSpacer880Op1 v11_02)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - Spacer-.880 Op.1")
 (material is .375 SS round stock)
