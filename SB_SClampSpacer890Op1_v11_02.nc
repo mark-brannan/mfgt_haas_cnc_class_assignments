@@ -7,6 +7,7 @@ O14208 (Solace SClampSpacer890Op1 v11_02)
 (diameters: large=.310, middle=.192, small=.180)
 G50 S4000 (Spindle cap speed)
 G20
+G54
 
 T0100 (Roughing tool)
 T0101
@@ -31,6 +32,7 @@ M01 (Optional stop)
 
 T0200 (Finish tool)
 T0202
+G54
 G00 X.750 Z.750 (Rapid to safe start position)
 G00 X0.385 Z0.100 (Rapid close to stock surface)
 G96 S225 M03
@@ -53,6 +55,7 @@ M01 (Optional stop)
 
 T0300 (Part off tool)
 T0303
+G54
 G00 X.750 Z.750 (Rapid to safe start position)
 G00 X0.385 Z0.100 (Rapid close to stock surface)
 G96 S150 M03

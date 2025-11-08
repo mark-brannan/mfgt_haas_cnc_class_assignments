@@ -6,6 +6,7 @@ O14214 (Solace SClampEndClevisOp2 v11_06)
 ("120329-8 Op2 installs .309 diameter on remaining end of part")
 G50 S4000 (Spindle cap speed)
 G20
+G54
 
 T0100 (Roughing tool)
 T0101

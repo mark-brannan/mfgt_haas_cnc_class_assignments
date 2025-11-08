@@ -7,6 +7,7 @@ O14210 (Solace SClampSpacer880Op1 v11_02)
 (diameters: large=.310, middle=.192, small=.180)
 G50 S4000 (Spindle cap speed)
 G20
+G54
 
 T0100 (Roughing tool)
 T0101
