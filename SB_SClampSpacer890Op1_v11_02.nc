@@ -26,7 +26,7 @@ G00 X0.212 (Rapid X to the middle diam on print .192 + 0.02)
 G01 Z-0.100 (Move Z the length of the small/mid diam shoulder .120 - .02 for filet)
 G01 X0.385 (back off X)
 M09
-G00 X7.0 Z7.0
+G00 X5.0 Z5.0
 M01 (Optional stop)
 
 T0200 (Finish tool)
@@ -48,7 +48,7 @@ G03 X.310 Z-0.150 R0.030 (swing around radius of 0.030 for the 0.015 TYP filet f
 G01 Z-1.160 (Move Z the length of the part .890 + the part off tool width .25 + 0.02 for finish facing pass)
 G01 X0.385 (back off X)
 M09
-G00 X7.0 Z7.0
+G00 X5.0 Z5.0
 M01 (Optional stop)
 
 T0300 (Part off tool)
@@ -63,7 +63,7 @@ G00 X0.330 (Rapid X to 0.02 bigger than the large diameter)
 G01 X-0.100 (part off)
 G01 X0.385 (back off X)
 M09
-G00 X7.0 Z7.0
+G00 X5.0 Z5.0
 
 M05 (Spindle Stop)
 M02 (Program End)
