@@ -4,7 +4,7 @@ O14211 (Solace SClampDriveClevisOp1 v11_02)
 ("Scissors Clamp - Drive Clevis Op.1")
 (material is .75 diameter brass stock)
 ("120329-4 Op1 installs .735 and .309 diameters, then part off 0.93 long")
-G50 S4000 (Spindle cap speed)
+G50 S2000 (Spindle cap speed)
 G20
 G54
 

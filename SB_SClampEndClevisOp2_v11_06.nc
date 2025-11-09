@@ -4,7 +4,7 @@ O14214 (Solace SClampEndClevisOp2 v11_06)
 ("Scissors Clamp - End Clevis Op.2")
 (material is .75 diameter brass stock)
 ("120329-8 Op2 installs .309 diameter on remaining end of part")
-G50 S4000 (Spindle cap speed)
+G50 S2000 (Spindle cap speed)
 G20
 G54
 

@@ -5,7 +5,7 @@ O14211 (Solace .12 SpacerOp2 v11_02)
 (material is .375 SS round stock)
 (lengths: middle=.120, small=0.040 TYP, large length could be either the .890 or .625)
 (diameters: large=.310, middle=.192, small=.180)
-G50 S4000 (Spindle cap speed)
+G50 S2000 (Spindle cap speed)
 G20
 G54
 

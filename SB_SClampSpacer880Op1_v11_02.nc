@@ -5,7 +5,7 @@ O14210 (Solace SClampSpacer880Op1 v11_02)
 (material is .375 SS round stock)
 (lengths: total=.880, large=.380, middle=.250, small=0.040 TYP)
 (diameters: large=.310, middle=.192, small=.180)
-G50 S4000 (Spindle cap speed)
+G50 S2000 (Spindle cap speed)
 G20
 G54
 
