@@ -1,5 +1,5 @@
 %
-O14211 (Solace .12 SpacerOp2 v11_09)
+O14211 (Solace .12 SpacerOp2 v11_09a)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - .12 neck Spacer Op.2")
 (material is .375 SS round stock)

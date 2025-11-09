@@ -9,6 +9,7 @@ G50 S2000 (Spindle cap speed)
 G20
 G54
 
+G00 X5.0 Z5.0 (safe for tool change)
 T0100 (Roughing tool)
 T0101
 G00 X.750 Z.750 (Rapid to safe start position)
@@ -34,7 +35,6 @@ M01 (Optional stop)
 
 T0200 (Finish tool)
 T0202
-G54
 G00 X.750 Z.750 (Rapid to safe start position)
 G00 X0.385 Z0.100 (Rapid close to stock surface)
 G96 S225 M03
@@ -61,12 +61,10 @@ M01 (Optional stop)
 
 T0300 (Part off tool)
 T0303
-G54
 G00 X.750 Z.750 (Rapid to safe start position)
 G00 X0.385 Z0.100 (Rapid close to stock surface)
 G97 S250 M03 (constant spindle rpm to compensate poor quality part off tool)
 F0.001 (Feed rate for part off)
-G97 
 M08
 G00 Z-1.035 (Rapid Z .890 + .125 + 0.02)
 G00 X0.330 (Rapid X to 0.02 bigger than the large diameter)

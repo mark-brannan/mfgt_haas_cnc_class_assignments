@@ -1,20 +1,28 @@
 %
-O14211 (Solace SClampDriveClevisOp1 v11_02)
+O14213 (Solace SClampDriveClevisOp2 v11_09)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
-("Scissors Clamp - Drive Clevis Op.1")
+("Scissors Clamp - Drive Clevis Op.2")
 (material is .75 diameter brass stock)
-("120329-4 Op1 installs .735 and .309 diameters, then part off 0.93 long")
+("120329-4 Op2 installs .309 diameter on remaining end of part")
 G50 S2000 (Spindle cap speed)
 G20
 G54
 
+G00 X5.0 Z5.0 (safe for tool change)
 T0100 (Roughing tool)
 T0101
 G00 X1.500 Z.750 (Rapid to safe start position)
-G00 X0.777 Z0.100 (Rapid close to stock surface)
+G00 X0.777 Z0.500 (Rapid vaguely close to stock surface)
 M08
 G96 S225 M03
 F0.006 (feed rate for roughing)
+
+G01 Z0.200 (Move Z to 0.200 in front of part for rough face removal)
+G01 X-0.010
+G00 X0.777 Z0.250 (rapid back off)
+G01 Z0.100 (Move Z to 0.100 in front of part for rough face removal)
+G01 X-0.010
+G00 X0.777 Z0.150 (rapid back off)
 
 G01 Z0.010 (Move Z to 0.010 in front of part for rough face)
 G01 X-0.100 (Move X to -0.1 to face part @Z=0.010)
@@ -54,23 +62,7 @@ G01 X-0.100 (Move X to -0.1 to face finish the part @Z=0)
 G00 X0.309 (Rapid X to the small diameter on print .309)
 G01 Z-0.120 (Move Z the length of the small diameter .120)
 G01 X.735 (Move X to large diameter)
-G01 Z-1.180 (Move Z to .930 + the width of part off tool .25)
-G01 X0.777 (back off X)
-M05
-M09
-G00 X5.0 Z5.0
-M01 (Optional stop)
-
-T0300 (Part off tool)
-T0303
-G00 X.750 Z.750 (Rapid to safe start position)
-G00 X0.777 Z0.100 (Rapid close to stock surface)
-G96 S150 M03
-F0.002 (Feed rate for part off)
-M08
-G01 Z-1.180 (Move Z to .930 + the width of part off tool .25)
-G00 X0.755 (Rapid X to 0.02 bigger than the large diameter)
-G01 X-0.100 (part off)
+G01 X.7355 Z-0.1205 (slight lift to blend the large diameters)
 G01 X0.777 (back off X)
 M05
 M09

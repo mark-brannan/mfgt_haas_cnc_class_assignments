@@ -16,23 +16,14 @@ G00 X0.385 Z0.500 (Rapid vaguely close to stock surface)
 M08
 F0.006 (feed rate for rough-roughing)
 G97 S400 M03 (constant spindle speed for rough facing along Z)
-(Move Z in increments of 0.100 for rough face removal)
-G01 Z0.300
-G01 X-0.010
-G00 X0.385 Z0.220 (rapid back off)
-
-G01 Z0.200
-G01 X-0.010
-G00 X0.385 Z0.220 (rapid back off)
-
 G01 Z0.100
 G01 X-0.010
-G00 X0.385 Z0.120 (rapid back off)
+G00 X0.385 (rapid back off)
 
 G01 Z0.010 (Move Z to 0.010 in front of part for rough face)
-F0.003 (feed rate for real-roughing)
-G01 X-0.100 (Move X to -0.1 to face part @Z=0.010)
-G00 X0.385 Z0.030 (rapid back off)
+F0.004 (feed rate for normal-roughing)
+G01 X-0.050
+G00 X0.385 (rapid back off)
 G96 S225 M03
 G00 X0.330 (Rapid X to large from print + 0.02 for finish facing pass)
 G01 Z-0.270 (Move Z the length of the middle .250 + 0.02)
@@ -40,6 +31,10 @@ G01 X0.385 Z0.050 (Move X to .01 bigger than the stock, Z .050 in front of part)
 G00 X0.212 (Rapid X to the middle diam on print .192 + 0.02)
 G01 Z-0.230 (Move Z the length of the small/mid diam shoulder .250 - .02 for filet)
 G01 X0.385 (back off X)
+(extra step to break chips, probably only needed for test runs)
+G01 X0.330 Z-0.270
+G01 Z-0.320
+G00 X0.385
 M05
 M09
 G00 X5.0 Z5.0
@@ -53,14 +48,22 @@ G96 S225 M03
 F0.001 (feed rate for finishing)
 M08
 G01 Z0 (Move Z to 0)
-G01 X-0.100 (Move X to -0.1 to face part @Z=0)
+G01 X-0.050 (Move X to -0.1 to face part @Z=0)
 G01 X0.120 (Move X to small diam .180 - 0.060 for the 0.015 R TYP filet)
-G03 X0.180 Z-0.030 R0.030 (Move X to small diam, Move Z to -0.030 for the radius of 0.030)
+G03 X0.180 Z-0.030 R0.030 (Move X to small diam, Z to -0.030 for radius of 0.030)
 G01 Z-0.040 (Move Z to length of small .040 TYP)
 G01 X0.192 (Move X to middle .192)
-G01 Z-0.250 (Move Z the length of middle, .015 TYP filet naturally created by tool nose radius)
-G03 X.310 Z-0.280 R0.030 (swing around 0.030 radius for 0.015 TYP filet from middle to large)
-G01 X0.385 (back off X)
+(Move Z length of middle, .015 TYP filet nat created by tool nose radius)
+G01 Z-0.250
+(Move X to large .310 – 0.060 in prep for 0.015 R TYP filet from middle to large)
+G01 X.250
+(swing around 0.030 radius for 0.015 TYP filet from middle to large)
+G03 X.310 Z-0.280 R0.030
+(small extra blend, may also clear chips)
+G01 X.330 Z-0.300
+G01 X.385
+G01 Z-0.300
+G01 X0.385 Z0 (back off)
 M05
 M09
 G00 X5.0 Z5.0
