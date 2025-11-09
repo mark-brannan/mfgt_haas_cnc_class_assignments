@@ -44,6 +44,7 @@ G00 X0.470 Z0.050
 G01 X0.329
 G01 Z-0.115
 G00 X0.777 Z0.050
+M05
 M09
 G00 X5.0 Z5.0
 M01 (Optional stop)
@@ -62,9 +63,9 @@ G01 Z-0.120 (Move Z the length of the small diameter .120)
 G01 X.735 (Move X to large diameter)
 G01 X.7355 Z-0.1205 (slight lift to blend the large diameters)
 G01 X0.777 (back off X)
+M05
 M09
 G00 X5.0 Z5.0
 
-M05 (Spindle Stop)
 M02 (Program End)
 %

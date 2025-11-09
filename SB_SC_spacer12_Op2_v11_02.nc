@@ -34,6 +34,7 @@ G01 X0.385 Z0.050 (Move X to .01 bigger than the stock, Z .050 in front of part)
 G00 X0.212 (Rapid X to the middle diam on print .192 + 0.02)
 G01 Z-0.100 (Move Z the length of the small/mid diam shoulder .120 - .02 for filet)
 G01 X0.385 (back off X)
+M05
 M09
 G00 X5.0 Z5.0
 M01 (Optional stop)
@@ -55,9 +56,9 @@ G01 Z-0.120 (Move Z the length of middle, .015 TYP filet naturally created by to
 G01 X.250 (Move X to large .310 – 0.060 in prep for 0.015 R TYP filet from middle to large)
 G03 X.310 Z-0.150 R0.030 (swing around radius of 0.030 for the 0.015 TYP filet from middle to large)
 G01 X0.385 (back off X)
+M05
 M09
 G00 X5.0 Z5.0
 
-M05 (Spindle Stop)
 M02 (Program End)
 %
