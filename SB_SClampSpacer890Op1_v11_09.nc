@@ -1,5 +1,5 @@
 %
-O14208 (Solace SClampSpacer890Op1 v11_02)
+O14208 (Solace SClampSpacer890Op1 v11_09)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - Spacer-.890 Op.1")
 (material is .375 SS round stock)
@@ -13,14 +13,15 @@ T0100 (Roughing tool)
 T0101
 G00 X.750 Z.750 (Rapid to safe start position)
 G00 X0.385 Z0.100 (Rapid close to stock surface)
-G96 S250 M03
 F0.003 (feed rate for roughing)
 M08
+G97 S400 M03 (constant spindle speed for rough facing along Z)
 G01 Z0.010 (Move Z to 0.010 in front of part for rough face)
 G01 X-0.100 (Move X to -0.1 to face part @Z=0.010)
 G00 Z0.050 (Rapid Z to .05 in front of part)
 G00 X0.330 (Rapid X to large from print + 0.02 for finish facing pass)
-G01 Z-1.160 (Move Z the length of your part .890 + the part off tool .25 + 0.02)
+G96 S250 M03 (variable spindle speed for axial roughing along Z)
+G01 Z-1.035 (Move Z the length of your part .890 + the part off tool .125 + 0.02)
 G01 X0.385 (Move X to .01 bigger than the stock)
 G00 Z0.050 (Rapid Z to 0.050 in front of part)
 G00 X0.212 (Rapid X to the middle diam on print .192 + 0.02)
@@ -51,7 +52,7 @@ G01 Z-0.120
 G01 X.250
 (swing around 0.030 radius for 0.015 TYP filet from middle to large)
 G03 X.310 Z-0.150 R0.030
-G01 Z-1.160 (Move Z .890 + .25 + 0.02)
+G01 Z-1.035 (Move Z .890 + .125 + 0.02)
 G01 X0.385 (back off X)
 M05
 M09
@@ -63,12 +64,17 @@ T0303
 G54
 G00 X.750 Z.750 (Rapid to safe start position)
 G00 X0.385 Z0.100 (Rapid close to stock surface)
-G96 S150 M03
-F0.002 (Feed rate for part off)
+G97 S250 M03 (constant spindle rpm to compensate poor quality part off tool)
+F0.001 (Feed rate for part off)
+G97 
 M08
-G00 Z-1.160 (Rapid Z .890 + .25 + 0.02)
+G00 Z-1.035 (Rapid Z .890 + .125 + 0.02)
 G00 X0.330 (Rapid X to 0.02 bigger than the large diameter)
-G01 X-0.100 (part off)
+G01 X0.275 (shallow cut)
+G00 X0.330 (back out)
+G01 X0.175
+G00 X0.330 (back out)
+G01 X0 (part off, don't go past center)
 G01 X0.385 (back off X)
 M05
 M09
