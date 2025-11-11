@@ -1,5 +1,5 @@
 %
-O14213 (Solace SClampDriveClevisOp1 v11_09)
+O14213 (Solace SClampDriveClevisOp1 v11_11)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - Drive Clevis Op.1")
 (material is .75 diameter brass stock)
@@ -22,7 +22,7 @@ G00 Z0.050 (Rapid Z to .05 in front of part)
 G96 S250 M03 (variable spindle speed for axial roughing along Z)
 (no roughing pass for large diam since already in .020 of stock diam)
 (take multiple .075 passes off to approach small diameter)
-(multiple Z passes along small diameter .120 - .020 for finish facing)
+(multiple Z passes to .120 - .020 for finish facing for small diameter)
 G00 X0.675
 G01 Z-0.100
 G00 X0.695 Z0.010
@@ -64,7 +64,7 @@ G00 Z-0.120 (prepare to do cleanup finishing pass on inner face)
 G01 X0.329
 G00 X0.735 Z-.115 (back off and prep for finish pass on large diameter)
 G01 Z-1.075 (finishing pass along Z to .930 + .125 + .020)
-G01 X0.777 (back off X)
+G01 X0.777 Z0 (back off X and Z)
 M05
 M09
 G00 X4.0 Z4.0
@@ -79,8 +79,8 @@ G97 S250 M03 (constant spindle rpm to compensate poor quality part off tool)
 F0.002 (Feed rate for part off)
 G00 Z-1.075 (Rapid Z to .930 + .125 + .020)
 G00 X0.755 (Rapid X to 0.02 bigger than the large diameter)
-G01 X-0.1
-G00 X0.777
+G01 X-0.100 (part off)
+G00 X0.777 (back off X only)
 M05
 M09
 G00 X4.0 Z4.0
