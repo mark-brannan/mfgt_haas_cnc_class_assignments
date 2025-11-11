@@ -25,17 +25,17 @@ G96 S250 M03 (variable spindle speed for axial roughing along Z)
 (multiple Z passes to .120 - .020 for finish facing for small diameter)
 G00 X0.675
 G01 Z-0.100
-G00 X0.695 Z0.010
-G01 X0.600
+G00 X0.695 Z0.020
+G00 X0.600
 G01 Z-0.100
-G00 X0.620 Z0.010
-G01 X0.525
+G00 X0.620 Z0.020
+G00 X0.525
 G01 Z-0.100
-G00 X0.545 Z0.010
-G01 X0.450
+G00 X0.545 Z0.020
+G00 X0.450
 G01 Z-0.100
-G00 X0.470 Z0.010
-G01 X0.329
+G00 X0.470 Z0.020
+G00 X0.329
 G01 Z-0.100
 G00 X0.777 Z-0.75 (back off)
 G00 Z-0.115 (move Z .015 further down to do inner rough facing)
@@ -61,7 +61,7 @@ G01 Z-0.120 (Move Z the length of the small diameter .120)
 G01 X0.329 Z-0.115 (back off slightly to have clearance)
 G00 X.777
 G00 Z-0.120 (prepare to do cleanup finishing pass on inner face)
-G01 X0.329
+G01 X0.309
 G00 X0.735 Z-.115 (back off and prep for finish pass on large diameter)
 G01 Z-1.075 (finishing pass along Z to .930 + .125 + .020)
 G01 X0.777 Z0 (back off X and Z)

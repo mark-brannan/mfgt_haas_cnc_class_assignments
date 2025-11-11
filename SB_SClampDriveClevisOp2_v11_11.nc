@@ -3,7 +3,7 @@ O14214 (Solace SClampDriveClevisOp2 v11_11)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - Drive Clevis Op.2")
 (material is .75 diameter brass stock)
-("120329-4 Op2 shortens to final length and installs .309 diameter on remaining end of part")
+("120329-4 Op2 shortens to final length and installs .309 diameter end of part")
 G50 S2000 (Spindle cap speed)
 G20
 G54
@@ -33,17 +33,17 @@ G96 S250 M03 (variable spindle speed for axial roughing along Z)
 (multiple Z passes along small diameter .120 - .020 for finish facing)
 G00 X0.675
 G01 Z-0.100
-G00 X0.695 Z0.010
-G01 X0.600
+G00 X0.695 Z0.020
+G00 X0.600
 G01 Z-0.100
-G00 X0.620 Z0.010
-G01 X0.525
+G00 X0.620 Z0.020
+G00 X0.525
 G01 Z-0.100
-G00 X0.545 Z0.010
-G01 X0.450
+G00 X0.545 Z0.020
+G00 X0.450
 G01 Z-0.100
-G00 X0.470 Z0.010
-G01 X0.329
+G00 X0.470 Z0.020
+G00 X0.329
 G01 Z-0.100
 G00 X0.777 Z-0.75 (back off)
 G00 Z-0.115 (move Z .015 further down to do inner rough facing)
@@ -69,7 +69,7 @@ G01 Z-0.120 (Move Z the length of the small diameter .120)
 G01 X0.329 Z-0.115 (back off slightly to have clearance)
 G00 X.777
 G00 Z-0.120 (prepare to do cleanup finishing pass on inner face)
-G01 X0.329
+G01 X0.309
 G01 X.735 (Move X to large diameter)
 G01 X.7351 Z-0.1201 (slight lift to blend the large diameters)
 G01 X0.777 (back off X)
