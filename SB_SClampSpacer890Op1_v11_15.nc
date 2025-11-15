@@ -18,13 +18,12 @@ M08
 F0.003 (feed rate for roughing)
 G97 S400 M03 (constant spindle speed for rough facing along Z)
 G01 Z0.010 (Move Z to 0.010 in front of part for rough face)
-G01 X-0.100 (Move X to -0.1 to face part @Z=0.010)
-G00 Z0.050 (Rapid Z to .05 in front of part)
+G01 X-0.050 (Move X to just past zero to face part @Z=0.010)
 G00 X0.330 (Rapid X to large from print + 0.02 for finish facing pass)
 G96 S250 M03 (variable spindle speed for axial roughing along Z)
 G01 Z-1.035 (slow .890 + .125 + 0.02)
-G01 X0.385 (Move X to .01 bigger than the stock)
-G00 Z0.050 (Rapid Z to 0.050 in front of part)
+G00 X0.385
+G00 Z0.050
 G00 X0.212 (Rapid X to the middle diam on print .192 + 0.02)
 G01 Z-0.100 (Move Z the length of the small/mid diam shoulder .120 - .02 for filet)
 G01 X0.385 (back off X)
