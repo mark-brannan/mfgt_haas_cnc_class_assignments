@@ -45,11 +45,11 @@ G01 Z-0.105
 G00 X0.470 Z0.020
 G00 X0.329
 G01 Z-0.105
-G00 X0.777 Z-0.75 (back off)
+G00 X0.777 Z.020
 G00 Z-0.120 (move Z .015 further down to do inner rough facing)
 F0.001 (nicer roughing feed rate)
 G01 X0.329 (rough facing pass on inner diameter to help avoid tool marks)
-G00 X0.777 Z0.050
+G01 X0.777 (back off X only, slowly)
 M05
 M09
 G00 X4.0 Z4.0
@@ -72,7 +72,7 @@ G00 Z-0.125 (prepare to do cleanup finishing pass on inner face)
 G01 X0.309
 G01 X.735 (Move X to large diameter)
 G01 X.7351 Z-0.1251 (slight lift to blend the large diameters)
-G01 X0.777 (back off X)
+G01 X0.777 (back off X only, slow)
 M05
 M09
 G00 X4.0 Z4.0
