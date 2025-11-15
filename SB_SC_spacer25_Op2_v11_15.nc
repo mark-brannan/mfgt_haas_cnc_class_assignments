@@ -62,8 +62,6 @@ G03 X.310 Z-0.280 R0.030
 (small extra blend, may also clear chips)
 G01 X.330 Z-0.300
 G01 X.385
-G01 Z-0.300
-G01 X0.385 (back off X only)
 M05
 M09
 G00 X5.0 Z5.0
