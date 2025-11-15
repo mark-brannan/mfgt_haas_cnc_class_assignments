@@ -1,5 +1,5 @@
 %
-O14215 (Solace SClampEndClevisOp1 v11_11)
+O14215 (Solace SClampEndClevisOp1 v11_15)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp - End Clevis Op.1")
 (material is .75 diameter brass stock)
