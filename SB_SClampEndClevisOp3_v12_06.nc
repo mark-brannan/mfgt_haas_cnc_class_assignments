@@ -18,7 +18,7 @@ F40.0 (600 RPM x 9 teeth x 0.008 inches/tooth = 43.2 IPM)
 G00 X1.5 Y2.1 Z7.0 (rapid to right rear of part with safe Z distance)
 G00 Z.75
 M03 (spindle on clockwise rotation)
-M08 (cooleant on)
+M08 (coolant on)
 
  (.735 nominal diameter of part - .695 final thickness = .040 to remove total)
  (remove .020 from first side with .005 finish pass, and remainder after drilling holes)
@@ -41,10 +41,10 @@ T02 M06 (Change to spot drill)
 G43 H2
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.5
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
-G00 Z.700
-G01 Z.595 F4.0 (spot hole plus extra for small chamfer .695 - .086)
+G00 Z.710
+G01 Z.575 F4.0 (spot hole plus extra for small chamfer .695 - .120)
 G00 Z1.5 M05 (back off and stop)
 M09
 M01 (Optional stop, check center)
@@ -55,7 +55,7 @@ T04 M06 (Change to .250 Drill)
 G43 H4
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
 G00 Z.700 (close height)
 G01 Z-0.100 F4.0
@@ -72,7 +72,7 @@ T08 M06 (Change to .250 reamer to nail the tolerance)
 G43 H8
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
 G00 Z.700 (close height)
 G01 Z-0.025 F6.0
@@ -94,7 +94,7 @@ F40.0 (600 RPM x 9 teeth x 0.008 inches/tooth = 43.2 IPM)
 
 G00 X1.5 Y2.1 Z7.0 (rapid to right rear of part with safe Z distance)
 G00 Z.75
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
 
 G00 Z.700 (leave .005 for finish)
@@ -115,10 +115,10 @@ T02 M06 (Change to spot drill)
 G43 H2
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.5
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
 G00 Z.700
-G01 Z.595 F4.0 (spot hole plus extra for small chamfer .695 - .086)
+G01 Z.575 F4.0 (spot hole plus extra for small chamfer .695 - .120)
 G00 Z1.5 M05 (back off and stop)
 M09
 M01 (Optional stop, check center)

@@ -17,7 +17,7 @@ F40.0 (600 RPM x 9 teeth x 0.008 inches/tooth = 43.2 IPM)
 
 G00 X1.5 Y2.1 Z7.0 (rapid to right rear of part with safe Z distance)
 G00 Z.75
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
 
 G00 Z.700 (.735 nominal diameter of part, leave .005 for finish)
@@ -39,10 +39,10 @@ T02 M06 (Change to spot drill)
 G43 H2
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.5
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
-G00 Z.700
-G01 Z.695 F4.0 (spot hole plus extra for small chamfer .695 - .100)
+G00 Z.710
+G01 Z.575 F4.0 (spot hole plus extra for small chamfer .695 - .120)
 G00 Z1.5 M05 (back off and stop)
 M09
 G00 Z7.0 (raise higher for clearance)
@@ -53,9 +53,9 @@ T03 M06 (Change to 5/16 Drill)
 G43 H3
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
-M08 (cooleant on)
+M08 (coolant on)
 M03 (spindle on clockwise rotation)
-G00 Z.700 (close height)
+G00 Z.710 (close height)
 G01 Z-0.100 F4.0
 G00 Z1.5 M05 (back off and stop)
 M09
@@ -70,7 +70,7 @@ G43 H5
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
 G00 Z.750 (close height)
-M08 (cooleant on)
+M08 (coolant on)
 G01 Z.710 F8. (feed closer in prep for canned cycle)
 (brass tapping: 60-100 SFM, 600-100 RPM for .375 tapped hole: 3.8 * 60 / .375 = 608)
 (alt suggested for steel to ensure a slow target feed: 16 TPI -> 10 ipm * 16 = 160 RPM)
@@ -81,6 +81,21 @@ G80
 M09
 G00 Z1.5 M05 (back off and stop)
 M01 (Optional stop, check threads...)
+(then flip and chamfer reverse side of hole slightly)
+(=========== chamfer reverse side of hole ==========)
+S800
+T02 M06
+G43 H2
+G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
+G00 Z1.5
+M08 (coolant on)
+M03 (spindle on clockwise rotation)
+G00 Z.710
+G01 Z.575 F4.0 (spot hole plus extra for small chamfer .695 - .120)
+G00 Z1.5 M05 (back off and stop)
+M09
+G00 Z7.0 (raise higher for clearance)
+G53 G00 Y0 (bring vise forward to absolute Y zero)
 
 M02 (Program end)
 %
