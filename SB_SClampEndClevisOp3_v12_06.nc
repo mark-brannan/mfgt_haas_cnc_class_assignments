@@ -51,7 +51,7 @@ M01 (Optional stop, check center)
 G00 Z7.0 (raise higher for clearance)
 G53 G00 Y0 (bring vise forward to absolute Y zero)
 
-T03 M06 (Change to .250 Drill)
+T04 M06 (Change to .250 Drill)
 G43 H4
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
