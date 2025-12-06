@@ -41,19 +41,20 @@ T02 M06 (Change to spot drill)
 G43 H2
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.5
-M03 (spindle on clockwise rotation)
 M08 (cooleant on)
+M03 (spindle on clockwise rotation)
 G00 Z.700
 G01 Z.609 F4.0 (spot hole plus extra for small chamfer .695 - .086)
 G00 Z1.5 M05 (back off and stop)
 M09
+M01 (Optional stop, check center)
 
 T03 M06 (Change to .250 Drill)
 G43 H4
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
-M03 (spindle on clockwise rotation)
 M08 (cooleant on)
+M03 (spindle on clockwise rotation)
 G00 Z.700 (close height)
 G01 Z-0.100 F4.0
 G00 Z1.5 M05 (back off and stop)
@@ -73,8 +74,8 @@ F40.0 (600 RPM x 9 teeth x 0.008 inches/tooth = 43.2 IPM)
 
 G00 X1.5 Y2.1 Z7.0 (rapid to right rear of part with safe Z distance)
 G00 Z.75
-M03 (spindle on clockwise rotation)
 M08 (cooleant on)
+M03 (spindle on clockwise rotation)
 
 G00 Z.700 (leave .005 for finish)
 G01 Y-2.1 (climb mill through top face of part moving cutter front to back)
