@@ -2,8 +2,8 @@
 O14217 (Solace SClampDriveClevisOp3 v12_06)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp Drive Clevis - Op.3")
-("mill one flat side, to .695 thickness, overall - Z zero from bottom of parallels")
-("tap 0.3125 5/16 hole for .375-16 UNC 2b THRU")
+(mill one flat side, to .695 thickness, overall - Z zero from bottom of parallels)
+(drill 0.3125 5/16 hole and then tap ".375-16 UNC 2b THRU")
 
 G17 G20 G40 G80 G90 G94 (Safe line)
 G54 (fixture offset)
@@ -65,7 +65,24 @@ G53 G00 Y0 (bring vise forward to absolute Y zero)
 M01 (Optional stop, check hole goes through cleanly)
 
 (=========== Tap threads ==========)
-(TODO)
+T05 M06
+G43 H3
+G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
+G00 Z1.0
+(brass tapping: 60-100 SFM, 600-100 RPM for .375 tapped hole)
+S600
+M08 (cooleant on)
+M03 (spindle on clockwise rotation)
+G00 Z.700 (close height)
+(F = RPM/TPI = 600/16 =  37.5)
+G84 Z-.100 R0.1 F37.5 (canned cycle to tap hole )
+G80
+G00 Z1.5 M05 (back off and stop)
+M09
 
+(=========== Tap threads ==========)
+M01 (Optional stop, check threads...)
+
+G84
 M02 (Program end)
 %
