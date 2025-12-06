@@ -42,9 +42,11 @@ G00 Z1.5
 M08 (cooleant on)
 M03 (spindle on clockwise rotation)
 G00 Z.700
-G01 Z.609 F4.0 (spot hole plus extra for small chamfer .695 - .086)
+G01 Z.695 F4.0 (spot hole plus extra for small chamfer .695 - .100)
 G00 Z1.5 M05 (back off and stop)
 M09
+G00 Z7.0 (raise higher for clearance)
+G53 G00 Y0 (bring vise forward to absolute Y zero)
 M01 (Optional stop, check center)
 
 T03 M06 (Change to 5/16 Drill)
@@ -60,6 +62,10 @@ M09
 
 G00 Z7.0 (raise higher for clearance)
 G53 G00 Y0 (bring vise forward to absolute Y zero)
+M01 (Optional stop, check hole goes through cleanly)
+
+(=========== Tap threads ==========)
+(TODO)
 
 M02 (Program end)
 %

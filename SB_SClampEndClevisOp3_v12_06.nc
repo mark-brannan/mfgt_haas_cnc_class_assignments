@@ -44,10 +44,12 @@ G00 Z1.5
 M08 (cooleant on)
 M03 (spindle on clockwise rotation)
 G00 Z.700
-G01 Z.609 F4.0 (spot hole plus extra for small chamfer .695 - .086)
+G01 Z.595 F4.0 (spot hole plus extra for small chamfer .695 - .100)
 G00 Z1.5 M05 (back off and stop)
 M09
 M01 (Optional stop, check center)
+G00 Z7.0 (raise higher for clearance)
+G53 G00 Y0 (bring vise forward to absolute Y zero)
 
 T03 M06 (Change to .250 Drill)
 G43 H4
@@ -62,7 +64,6 @@ M09
 
 G00 Z7.0 (raise higher for clearance)
 G53 G00 Y0 (bring vise forward to absolute Y zero)
-
 M01 (Optional stop, flip part, small loss of X Y zero is ok)
 
 (=========== Finish thicknessing oposite side ==========)
