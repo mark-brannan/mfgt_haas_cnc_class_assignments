@@ -65,24 +65,22 @@ G53 G00 Y0 (bring vise forward to absolute Y zero)
 M01 (Optional stop, check hole goes through cleanly)
 
 (=========== Tap threads ==========)
-T05 M06
-G43 H3
+T05 M06 (3/8 .375 tap)
+G43 H5
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
-(brass tapping: 60-100 SFM, 600-100 RPM for .375 tapped hole)
-S600
+G00 Z.750 (close height)
 M08 (cooleant on)
-M03 (spindle on clockwise rotation)
-G00 Z.700 (close height)
-(F = RPM/TPI = 600/16 =  37.5)
-G84 Z-.100 R0.1 F37.5 (canned cycle to tap hole )
+G01 Z.710 F8. (feed closer in prep for canned cycle)
+(brass tapping: 60-100 SFM, 600-100 RPM for .375 tapped hole: 3.8 * 60 / .375 = 608)
+(alt suggested for steel to ensure a slow target feed: 16 TPI -> 10 ipm * 16 = 160 RPM)
+(For G84 canned cycle @600 RPM: F = RPM/TPI = 600/16 = 37.5)
+(but going slower with a target of 15ipm: 15 * 16 = 240 RPM)
+G84 Z-.325 R0.2 F37.5 S240 (canned cycle to tap thru hole)
 G80
-G00 Z1.5 M05 (back off and stop)
 M09
-
-(=========== Tap threads ==========)
+G00 Z1.5 M05 (back off and stop)
 M01 (Optional stop, check threads...)
 
-G84
 M02 (Program end)
 %
