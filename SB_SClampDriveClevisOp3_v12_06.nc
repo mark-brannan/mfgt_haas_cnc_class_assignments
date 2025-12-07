@@ -3,7 +3,7 @@ O14217 (Solace SClampDriveClevisOp3 v12_06)
 (Solace Brannan #42 - MFGT 106 Fall 2025)
 ("Scissors Clamp Drive Clevis - Op.3")
 (mill one flat side, to .695 thickness, overall - Z zero from bottom of parallels)
-(drill 0.3125 5/16 hole and then tap ".375-16 UNC 2b THRU")
+(drill 0.3230 hole and then tap ".375-16 UNC 2b THRU")
 
 G17 G20 G40 G80 G90 G94 (Safe line)
 G54 (fixture offset)
@@ -34,7 +34,7 @@ G53 G00 Y0 (bring vise forward to absolute Y zero)
 M01 (Optional stop, measure thickness)
 
 (=========== Drill Holes ==========)
-S800 (800 is good for 5/16 and brass)
+S800 (800 is good for .3230 and brass)
 T02 M06 (Change to spot drill)
 G43 H2
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
@@ -42,21 +42,22 @@ G00 Z1.5
 M08 (coolant on)
 M03 (spindle on clockwise rotation)
 G00 Z.710
-G01 Z.575 F4.0 (spot hole plus extra for small chamfer .695 - .120)
+ (spot hole plus extra for sharp chamfer, 40 deg, to help tap)
+G01 Z.575 F4.0 (use the full full depth of spot drill tip .220: .695 - .220 = .475)
 G00 Z1.5 M05 (back off and stop)
 M09
 G00 Z7.0 (raise higher for clearance)
 G53 G00 Y0 (bring vise forward to absolute Y zero)
 M01 (Optional stop, check center)
 
-T03 M06 (Change to 5/16 Drill)
+T03 M06 (Change to .3230 Drill)
 G43 H3
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
 G00 Z1.0
 M08 (coolant on)
 M03 (spindle on clockwise rotation)
 G00 Z.710 (close height)
-G01 Z-0.100 F4.0
+G01 Z-0.200 F4.0
 G00 Z1.5 M05 (back off and stop)
 M09
 
@@ -68,31 +69,16 @@ M01 (Optional stop, check hole goes through cleanly)
 T05 M06 (3/8 .375 tap)
 G43 H5
 G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
-G00 Z1.0
 G00 Z.750 (close height)
-M08 (coolant on)
-G01 Z.710 F8. (feed closer in prep for canned cycle)
+G01 Z.700 F8. (feed closer in prep for canned cycle)
+G04 P1.0 (dwell briefly to visually check if tap holder is will make contact/compress)
 (brass tapping: 60-100 SFM, 600-100 RPM for .375 tapped hole: 3.8 * 60 / .375 = 608)
 (alt suggested for steel to ensure a slow target feed: 16 TPI -> 10 ipm * 16 = 160 RPM)
 (For G84 canned cycle @600 RPM: F = RPM/TPI = 600/16 = 37.5)
 (but going slower with a target of 15ipm: 15 * 16 = 240 RPM)
-G84 Z-.325 R0.2 F37.5 S240 (canned cycle to tap thru hole)
+M08 (coolant on; but probably not needed)
+G84 Z-.325 R0.2 F15.0 S240 (canned cycle to tap thru hole)
 G80
-M09
-G00 Z1.5 M05 (back off and stop)
-M01 (Optional stop, check threads...)
-(then flip and chamfer reverse side of hole slightly)
-(=========== chamfer reverse side of hole ==========)
-S800
-T02 M06
-G43 H2
-G00 X0 Y0 Z7.0 (rapid to center/top of part with safe Z distance)
-G00 Z1.5
-M08 (coolant on)
-M03 (spindle on clockwise rotation)
-G00 Z.710
-G01 Z.575 F4.0 (spot hole plus extra for small chamfer .695 - .120)
-G00 Z1.5 M05 (back off and stop)
 M09
 G00 Z7.0 (raise higher for clearance)
 G53 G00 Y0 (bring vise forward to absolute Y zero)
