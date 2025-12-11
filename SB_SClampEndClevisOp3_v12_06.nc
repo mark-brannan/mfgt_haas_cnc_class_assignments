@@ -44,7 +44,7 @@ G00 Z1.5
 M08 (coolant on)
 M03 (spindle on clockwise rotation)
 G00 Z.710
-G01 Z.575 F4.0 (spot hole plus extra for small chamfer .695 - .120)
+G01 Z.595 F4.0 (spot hole plus extra for small chamfer .695 - .200)
 G00 Z1.5 M05 (back off and stop)
 M09
 M01 (Optional stop, check center)

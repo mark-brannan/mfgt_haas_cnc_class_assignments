@@ -43,7 +43,7 @@ M08 (coolant on)
 M03 (spindle on clockwise rotation)
 G00 Z.710
  (spot hole plus extra for sharp chamfer, 40 deg, to help tap)
-G01 Z.575 F4.0 (use the full full depth of spot drill tip .220: .695 - .220 = .475)
+G01 Z.495 F4.0 (use the full full depth of spot drill tip .200: .695 - .200 = .495)
 G00 Z1.5 M05 (back off and stop)
 M09
 G00 Z7.0 (raise higher for clearance)
@@ -77,7 +77,7 @@ G04 P1.0 (dwell briefly to visually check if tap holder is will make contact/com
 (For G84 canned cycle @600 RPM: F = RPM/TPI = 600/16 = 37.5)
 (but going slower with a target of 15ipm: 15 * 16 = 240 RPM)
 M08 (coolant on; but probably not needed)
-G84 Z-.325 R0.2 F15.0 S240 (canned cycle to tap thru hole)
+G84 Z-.425 R0.2 F15.0 S240 (canned cycle to tap thru hole)
 G80
 M09
 G00 Z7.0 (raise higher for clearance)
