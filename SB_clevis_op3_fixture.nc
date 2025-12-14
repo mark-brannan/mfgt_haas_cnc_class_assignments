@@ -12,6 +12,42 @@ G20
 (Ensure the clearance height will clear the part and or fixtures.)
 (Raise the Z-axis to a safe height before starting the program.)
 
+(spot and drill hole)
+S1000 
+F4.0
+T02 M06 (Change to spot drill)
+G43 H2
+G00 X0.946 Y0 Z2.5
+M08 (coolant on)
+M03 (spindle on clockwise rotation)
+G00 Z.210
+G01 Z-.4
+G00 Z1.5 M05 (back off and stop)
+G00 Z1.5 M05 (back off and stop)
+M09
+M01 (Optional stop, check center)
+G00 Z7.0 (raise higher for clearance)
+G53 G00 Y0 (bring vise forward to absolute Y zero)
+
+T03 M06 (Change to 5/16 drill)
+G43 H3
+G00 X0.946 Y0 Z2.5
+M08 (coolant on)
+M03 (spindle on clockwise rotation)
+G00 Z.210
+G01 Z-.4
+G01 Z.2 F20 (retract)
+G01 Z-.4 F10
+G01 Z-.8 F4
+G01 Z.2 F20 (retract)
+G01 Z-.8 F10
+G01 Z-1.1 F4
+G01 Z.2 F20 (retract)
+M09
+M01 (Optional stop, check center)
+G00 Z7.0 (raise higher for clearance)
+G53 G00 Y0 (bring vise forward to absolute Y zero)
+
 (Bore .740 diameter hole)
 G54
 T6 M6
